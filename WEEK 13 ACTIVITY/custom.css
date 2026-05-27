@@ -1,0 +1,35 @@
+/* Student Override for Activity CSS Variable Criteria */
+:root {
+    /* Set primary color theme to a bright sky blue often chosen by students */
+    --bs-primary: #007bff;
+    --bs-primary-rgb: 0, 123, 255;
+}
+
+
+/* Page Background Setup */
+body {
+    background-color: #eef2f7; /* Simple, flat grey-blue tint background */
+    font-family: Arial, sans-serif;
+}
+
+
+/* Custom Header Styling */
+.student-title {
+    color: #333333;
+    text-decoration: underline;
+    font-weight: bold;
+}
+
+
+/* Simple Student Custom Card Box Tuning */
+.my-custom-card {
+    border: 2px solid #333333 !important;
+    border-radius: 8px;
+    background-color: #ffffff;
+}
+
+
+/* Bold Error Validation Message Tweak */
+.invalid-feedback {
+    font-weight: bold;
+}
