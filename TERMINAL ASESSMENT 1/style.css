@@ -1,0 +1,240 @@
+/* 1. RESET & BASE VARIABLE STYLES (Mobile First)*/
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    line-height: 1.6;
+    background-color: #1e1e24; /* Dark mode style inspired by assignment cards */
+    color: #e0e0e0;
+    padding-bottom: 40px;
+}
+
+
+tt {
+    font-family: inherit; /* Eliminates the default blocky typewriter look */
+}
+
+
+/*2. SEMANTIC STRUCTURES*/
+header {
+    background: linear-gradient(135deg, #2c3e50, #1a252f);
+    color: #ffffff;
+    text-align: center;
+    padding: 2.5rem 1rem;
+    border-bottom: 3px solid #1abc9c;
+}
+
+
+header h1 {
+    font-size: 1.8rem;
+    margin-bottom: 5px;
+}
+
+
+header p {
+    color: #1abc9c;
+    font-size: 0.9rem;
+    font-weight: bold;
+}
+
+
+/* Flexbox Navbar Layout */
+nav {
+    display: flex;
+    flex-direction: column; /* Stacked links on mobile viewport */
+    background-color: #2c3e50;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+
+nav a {
+    color: #ffffff;
+    padding: 15px 20px;
+    text-decoration: none;
+    font-weight: 600;
+    text-align: center;
+    border-bottom: 1px solid #34495e;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+
+nav a:hover, nav a.active {
+    background-color: #1abc9c;
+    color: #1e1e24;
+}
+
+
+/* Core Document Containers */
+main {
+    max-width: 1000px;
+    margin: 20px auto;
+    padding: 15px;
+}
+
+
+/* Base Mobile Layout via Single-Column Stack */
+.grid-container {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 20px;
+}
+
+
+section {
+    background-color: #2a2a35;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+    border-left: 4px solid #1abc9c;
+}
+
+
+section h2, section h3 {
+    color: #1abc9c;
+    margin-bottom: 15px;
+}
+
+
+/* Image Setup */
+.profile-card {
+    text-align: center;
+}
+
+
+.profile-img {
+    border-radius: 8px;
+    object-fit: cover;
+    border: 3px solid #1abc9c;
+    margin-bottom: 15px;
+    max-width: 100%;
+}
+
+
+/* UI Elements & Lists */
+ul {
+    list-style: none;
+}
+
+
+ul li {
+    margin-bottom: 12px;
+    padding-left: 25px;
+    position: relative;
+}
+
+
+ul li::before {
+    content: "⚡";
+    position: absolute;
+    left: 0;
+    color: #1abc9c;
+}
+
+
+/* Form Styling Components */
+.form-group {
+    margin-bottom: 20px;
+}
+
+
+label {
+    display: block;
+    margin-bottom: 8px;
+    font-weight: bold;
+    color: #1abc9c;
+}
+
+
+input[type="text"],
+input[type="email"],
+textarea {
+    width: 100%;
+    padding: 12px;
+    background-color: #1e1e24;
+    border: 1px solid #444;
+    border-radius: 4px;
+    color: #fff;
+    font-size: 1rem;
+    transition: border-color 0.3s;
+}
+
+
+input:focus, textarea:focus {
+    outline: none;
+    border-color: #1abc9c;
+}
+
+
+button {
+    background-color: #1abc9c;
+    color: #1e1e24;
+    padding: 14px 20px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 1rem;
+    width: 100%;
+    font-weight: bold;
+    transition: background-color 0.3s, transform 0.1s;
+}
+
+
+button:hover {
+    background-color: #16a085;
+}
+
+
+button:active {
+    transform: scale(0.99);
+}
+
+
+/* Footer Element */
+footer {
+    text-align: center;
+    padding: 20px;
+    margin-top: 40px;
+    color: #7f8c8d;
+    font-size: 0.85rem;
+}
+
+
+/*3. RESPONSIVE MEDIA QUERIES (Desktop Breakpoint) */
+@media (min-width: 768px) {
+    header h1 {
+        font-size: 2.5rem;
+    }
+
+
+    /* Transform navigation row-wise on desktops */
+    nav {
+        flex-direction: row;
+        justify-content: center;
+    }
+
+
+    nav a {
+        border-bottom: none;
+        border-right: 1px solid #34495e;
+        padding: 15px 30px;
+    }
+
+
+    /* Transform layout to a 2-Column Grid on large displays */
+    .grid-container {
+        grid-template-columns: 1fr 1fr;
+    }
+
+
+    /* Make featured items stretch completely across across columns if needed */
+    .full-width {
+        grid-column: span 2;
+    }
+}
