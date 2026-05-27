@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Week 12 Assignment - Midterm Portfolio</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="custom.css" rel="stylesheet">
+</head>
+<body>
+
+
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark sticky-top shadow-sm">
+        <div class="container">
+            <a class="navbar-brand fw-bold text-info" href="#">🚀 MyTech Hub</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto fw-medium">
+                    <li class="nav-item"><a class="nav-link" href="#carouselSection">Home</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#featuresGrid">Features</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#registerForm">Join</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+
+    <div id="carouselSection" class="carousel slide" data-bs-ride="carousel">
+        <div class="carousel-indicators">
+            <button type="button" data-bs-target="#carouselSection" data-bs-slide-to="0" class="active"></button>
+            <button type="button" data-bs-target="#carouselSection" data-bs-slide-to="1"></button>
+        </div>
+        <div class="carousel-inner text-white text-center">
+            <div class="carousel-item active slide-bg-1 py-5">
+                <div class="container my-5 p-4 rounded bg-dark-overlay">
+                    <h1 class="display-4 fw-bold">Explore Responsive Layouts</h1>
+                    <p class="lead">Built using modern Bootstrap grids that scale beautifully on every device size.</p>
+                    <a href="#registerForm" class="btn btn-info px-4 rounded-pill">Get Registered</a>
+                </div>
+            </div>
+            <div class="carousel-item slide-bg-2 py-5">
+                <div class="container my-5 p-4 rounded bg-dark-overlay">
+                    <h1 class="display-4 fw-bold">Custom Javascript Validation</h1>
+                    <p class="lead">Prevents broken form submissions using standard browser logic checks.</p>
+                    <a href="#featuresGrid" class="btn btn-outline-light px-4 rounded-pill">See Services</a>
+                </div>
+            </div>
+        </div>
+        <button class="carousel-control-prev" type="button" data-bs-target="#carouselSection" data-bs-slide="prev">
+            <span class="carousel-control-prev-icon"></span>
+        </button>
+        <button class="carousel-control-next" type="button" data-bs-target="#carouselSection" data-bs-slide="next">
+            <span class="carousel-control-next-icon"></span>
+        </button>
+    </div>
+
+
+    <div class="container my-5 py-3" id="featuresGrid">
+        <div class="text-center mb-5">
+            <h2 class="fw-bold">What We Offer</h2>
+            <p class="text-muted">A clean layout built for my Week 12 terminal presentation project.</p>
+        </div>
+        <div class="row g-4">
+            <div class="col-12 col-md-6 col-lg-4">
+                <div class="card h-100 border-light shadow-sm text-center card-hover">
+                    <div class="card-body p-4">
+                        <div class="fs-1 mb-2 text-primary">📱</div>
+                        <h4 class="card-title fw-bold">Mobile Optimization</h4>
+                        <p class="card-text text-muted">The layout naturally collapses into a single stack on smaller mobile screen widths.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-12 col-md-6 col-lg-4">
+                <div class="card h-100 border-light shadow-sm text-center card-hover">
+                    <div class="card-body p-4">
+                        <div class="fs-1 mb-2 text-success">⚙️</div>
+                        <h4 class="card-title fw-bold">Dynamic Feedback</h4>
+                        <p class="card-text text-muted">Input validation returns errors instantly if user entries do not conform to input types.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-12 col-md-12 col-lg-4">
+                <div class="card h-100 border-light shadow-sm text-center card-hover">
+                    <div class="card-body p-4">
+                        <div class="fs-1 mb-2 text-info">🎨</div>
+                        <h4 class="card-title fw-bold">Clean Design</h4>
+                        <p class="card-text text-muted">Uses simple paddings, rounded borders, and subtle container dropshadows for a fresh look.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <div class="container my-5 py-5 rounded shadow-sm bg-white border border-light-subtle" id="registerForm">
+        <div class="row justify-content-center">
+            <div class="col-11 col-md-8 col-lg-6">
+                <h2 class="text-center fw-bold mb-2">Create an Account</h2>
+                <p class="text-center text-muted mb-4">Please submit your credentials to test out the logic modal activation.</p>
+               
+                <form id="submissionForm" class="needs-validation" novalidate>
+                    <div class="mb-3">
+                        <label for="studentName" class="form-label fw-semibold">Your Name</label>
+                        <input type="text" class="form-control" id="studentName" placeholder="e.g. Alex Smith" required minlength="3">
+                        <div class="valid-feedback">Excellent!</div>
+                        <div class="invalid-feedback">Please provide your name (minimum 3 characters).</div>
+                    </div>
+                    <div class="mb-3">
+                        <label for="studentEmail" class="form-label fw-semibold">Email Address</label>
+                        <input type="email" class="form-control" id="studentEmail" placeholder="name@example.com" required>
+                        <div class="valid-feedback">Looks valid!</div>
+                        <div class="invalid-feedback">Please enter a valid structural email layout.</div>
+                    </div>
+                    <div class="mb-3 form-check">
+                        <input type="checkbox" class="form-check-input" id="checkTerms" required>
+                        <label class="form-check-label text-muted small" for="checkTerms">I agree to the terms of service guidelines</label>
+                        <div class="invalid-feedback">You must check this box to continue.</div>
+                    </div>
+                    <button type="submit" class="btn btn-dark w-100 py-2 mt-3 fw-bold">Submit Application</button>
+                </form>
+            </div>
+        </div>
+    </div>
+
+
+    <footer class="bg-dark text-white-50 text-center py-4 mt-5">
+        <div class="container">
+            <p class="mb-0 small">&copy; 2026 Student Terminal Portfolio. Built with Bootstrap 5.</p>
+        </div>
+    </footer>
+
+
+    <div class="modal fade" id="validationSuccessModal" tabindex="-1" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content text-center p-3">
+                <div class="modal-header border-0 justify-content-center">
+                    <h4 class="modal-title fw-bold text-success">✔️ Success!</h4>
+                </div>
+                <div class="modal-body">
+                    <p class="lead mb-0">The form parsed through JavaScript successfully without errors.</p>
+                </div>
+                <div class="modal-footer border-0 justify-content-center">
+                    <button type="button" class="btn btn-secondary px-4" data-bs-dismiss="modal">Close</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="custom.js"></script>
+</body>
+</html>
